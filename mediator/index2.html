@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Транслитератор</title>
+    <style>
+      .text-field {
+        padding: 1rem;
+        width: 50%;
+        min-height: 25vh;
+        border: 2px dashed #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-field"></div>
+    <script>
+      const translit = (() => {
+        const charsObj = {
+          А: 'A',
+          Б: 'B',
+          В: 'V',
+          Г: 'G',
+          Д: 'D',
+          Е: 'Е',
+          Ё: 'YO',
+          Ж: 'ZH',
+          З: 'Z',
+          И: 'I',
+          Й: 'Y',
+          К: 'K',
+          Л: 'L',
+          М: 'M',
+          Н: 'N',
+          О: 'O',
+          П: 'P',
+          Р: 'R',
+          С: 'S',
+          Т: 'T',
+          У: 'U',
+          Ф: 'F',
+          Х: 'KH',
+          Ц: 'TS',
+          Ч: 'CH',
+          Ш: 'SH',
+          Щ: 'SCH',
+          Ъ: '-',
+          Ы: 'Y',
+          Ь: '-',
+          Э: 'E',
+          Ю: 'YU',
+          Я: 'YA',
+        }
+
+        const mapFromCyrToLat = new Map(Object.entries(charsObj))
+
+        // const mapFromLatToCyr = new Map(
+        //   Object.entries(charsObj).map((item) => item.reverse())
+        // )
+
+        return {
+          convertToLat: (char) => mapFromCyrToLat.get(char),
+        }
+      })()
+
+      const textField = document.querySelector('.text-field')
+      const regex = /[А-ЯЁ]/i
+
+      document.addEventListener('keydown', (e) => {
+        const char = e.key
+
+        if (regex.test(char)) {
+          const key = char.toUpperCase()
+
+          textField.textContent += translit.convertToLat(key)
+        } else if (char === 'Backspace') {
+          const text = textField.textContent
+          textField.textContent = text.slice(0, text.length - 1)
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animator</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .item {
+        margin: 1rem;
+        width: 50px;
+        height: 50px;
+        background: radial-gradient(circle, yellow, orange);
+        border: 2px dashed #222;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .selected {
+        border: 2px solid #222;
+      }
+      .animated {
+        animation: rotation 2s linear infinite;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <button data-btn="addItem">Add Item</button>
+      <button data-btn="removeItem">Remove Item</button>
+      <button data-btn="startAnimation">Start Animation</button>
+      <button data-btn="stopAnimation">Stop Animation</button>
+    </div>
+    <div class="container"></div>
+
+    <script>
+      document.addEventListener('click', (e) => {
+        if (
+          e.target.tagName !== 'BUTTON' &&
+          !e.target.classList.contains('item')
+        )
+          return
+
+        if (e.target.tagName === 'BUTTON') {
+          const { btn } = e.target.dataset
+
+          switch (btn) {
+            case 'addItem':
+              addItem()
+              break
+            case 'removeItem':
+              removeItem()
+              break
+            case 'startAnimation':
+              startAnimation()
+              break
+            case 'stopAnimation':
+              stopAnimation()
+              break
+          }
+        } else {
+          if (findOne('.selected')) {
+            findOne('.selected').classList.remove('selected')
+          }
+          e.target.classList.add('selected')
+        }
+      })
+
+      function findOne(selector, parent = document) {
+        return parent.querySelector(selector)
+      }
+
+      function addItem() {
+        const item = document.createElement('div')
+        item.className = 'item'
+        findOne('.container').append(item)
+      }
+
+      function removeItem() {
+        if (findOne('.item') && findOne('.selected')) {
+          findOne('.selected').remove()
+        }
+      }
+
+      function startAnimation() {
+        if (findOne('.selected') && !findOne('.selected.animated')) {
+          findOne('.selected').classList.add('animated')
+        }
+      }
+
+      function stopAnimation() {
+        if (findOne('.selected.animated')) {
+          findOne('.selected.animated').classList.remove('animated')
+        }
+      }
+    </script>
+  </body>
+</html>
