@@ -2287,7 +2287,7 @@ jane.send('Bye!')
 [![transliterator](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/transliterator.png?raw=true)](https://codepen.io/harryheman/pen/NWRPXmz)
 Анимация через делегирование событий:
 
-[![animation](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/animation.png?raw=true)](https://codepen.io/harryheman/pen/NWRPXmz)
+[![animation](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/animation.png?raw=true)](https://codepen.io/harryheman/pen/GRjgyav)
 ### <a name="memento"></a> Запоминание
 
 Общий пример:
@@ -2420,7 +2420,7 @@ class Proft {
 
 Наблюдение за DOM-элементами:
 
-[![observer](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/observer.png?raw=true)](https://codepen.io/harryheman/pen/NWRPXmz)
+[![observer](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/observer.png?raw=true)](https://codepen.io/harryheman/pen/vYXEpqx)
 
 Не путать со встроенными наблюдателями (MutationObserver, IntersectionObserver и т.д.).
 
