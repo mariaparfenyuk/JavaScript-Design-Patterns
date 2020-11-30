@@ -2285,14 +2285,9 @@ jane.send('Bye!')
 Транслитератор:
 
 [![transliterator](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/transliterator.png?raw=true)](https://codepen.io/harryheman/pen/NWRPXmz)
-
 Анимация через делегирование событий:
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Mediator Pattern Example - Animation Through Event Delegation" src="https://codepen.io/harryheman/embed/GRjgyav?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/harryheman/pen/GRjgyav'>Mediator Pattern Example - Animation Through Event Delegation</a> by Igor Agapov
-  (<a href='https://codepen.io/harryheman'>@harryheman</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
+[![animation](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/animation.png?raw=true)](https://codepen.io/harryheman/pen/NWRPXmz)
 ### <a name="memento"></a> Запоминание
 
 Общий пример:
@@ -2425,10 +2420,7 @@ class Proft {
 
 Наблюдение за DOM-элементами:
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Observer Pattern Example - Observable Checkboxes" src="https://codepen.io/harryheman/embed/vYXEpqx?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/harryheman/pen/vYXEpqx'>Observer Pattern Example - Observable Checkboxes</a> by Igor Agapov
-  (<a href='https://codepen.io/harryheman'>@harryheman</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+[![observer](https://github.com/harryheman/JavaScript-Design-Patterns/blob/main/!img/observer.png?raw=true)](https://codepen.io/harryheman/pen/NWRPXmz)
 
 Не путать со встроенными наблюдателями (MutationObserver, IntersectionObserver и т.д.).
 
