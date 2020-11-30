@@ -2284,10 +2284,10 @@ jane.send('Bye!')
 
 Транслитератор:
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Mediator Pattern Example - Transliterator" src="https://codepen.io/harryheman/embed/NWRPXmz?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<pre><iframe height="265" style="width: 100%;" scrolling="no" title="Mediator Pattern Example - Transliterator" src="https://codepen.io/harryheman/embed/NWRPXmz?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/harryheman/pen/NWRPXmz'>Mediator Pattern Example - Transliterator</a> by Igor Agapov
   (<a href='https://codepen.io/harryheman'>@harryheman</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+</iframe></pre>
 
 Анимация через делегирование событий:
 
